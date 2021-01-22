@@ -24,7 +24,7 @@ namespace TrelloBasicApiTests.Properties
             int searchTimeout = RunGlobalSettingHelper.WebDriverSettings.GetSection("searchTimeout").Value.As<int>();
             int pageLoadTimeout = RunGlobalSettingHelper.WebDriverSettings.GetSection("pageLoadTimeout").Value.As<int>();
 
-            TestContext.Instance.Logger.WriteLine($"Starting {browserType}").BreakLine();
+            object p = TestContext.Instance.Logger.WriteLine($"Starting {browserType}").BreakLine();
 
             switch (browserType)
             {
