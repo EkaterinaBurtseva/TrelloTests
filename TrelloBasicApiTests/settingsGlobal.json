@@ -1,0 +1,17 @@
+﻿{
+  "webdriver": {
+    "browser": "chrome",
+    "commandTimeout": 60,
+    "searchTimeout": 60,
+    "pageLoadTimeout": 60
+  },
+  "environment": {
+    "homepageUrl": "https://trello.com",
+    "token": "d5ffa88c496281e00d43c21d5960638161f18744d6a7b9ab0e406f55142e9c56",
+    "key": "4f45b8a615a25d127059e00153617500";
+  },
+  "ui": {
+    "waitpagesloaded": "false"
+  }
+}
+
