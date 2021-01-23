@@ -1,5 +1,5 @@
 ﻿using System;
-using NUnit.Framework.Internal;
+using TrelloBasicApiTests.Logger;
 
 namespace TrelloBasicApiTests.Properties
 {

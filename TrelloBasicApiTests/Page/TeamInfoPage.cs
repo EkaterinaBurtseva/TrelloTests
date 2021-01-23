@@ -31,9 +31,10 @@ namespace TrelloBasicApiTests.Page
             return TeamNameInfo.Text;
         }
 
-        public void ClickMembersTab()
+        public TeamInfoPage ClickMembersTab()
         {
             MembersTab.Click();
+            return this;
         }
 
         public List<string> GetAllMembersName()

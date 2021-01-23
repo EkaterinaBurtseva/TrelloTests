@@ -12,6 +12,8 @@
     <Folder Include="Page\" />
     <Folder Include="Helpers\" />
     <Folder Include="Logger\" />
+    <Folder Include="Context\" />
+    <Folder Include="PageSteps\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="xunit" Version="2.4.1" />

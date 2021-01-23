@@ -31,30 +31,34 @@ namespace TrelloBasicApiTests.Page
         private IWebElement MembersInfoSubmit;
 
 
-        public bool IsCompanyInfoFormDisplaye()
+        public bool IsCompanyInfoFormDisplayed()
         {
             return NameOfTheTeamField.Displayed;
         }
 
-        public void EnterCompanyName(string company)
+        public CompanyInfoForm EnterCompanyName(string company)
         {
             NameOfTheTeamField.SendKeys(company);
+            return this;
         }
 
-        public void ClickTypeOfTeamDropdown()
+        public CompanyInfoForm ClickTypeOfTeamDropdown()
         {
             TypeOfTeamDropdown.Click();
+            return this;
 
         }
 
-        public void ChooseMarketingOption()
+        public CompanyInfoForm ChooseMarketingOption()
         {
             TypeOfTeamDropDownMarketing.Click();
+            return this;
         }
 
-        public void ClickCreateTeamSubmitBtn()
+        public CompanyInfoForm ClickCreateTeamSubmitBtn()
         {
             CreateTeamSubmitBtn.Click();
+            return this;
 
         }
 
@@ -63,15 +67,17 @@ namespace TrelloBasicApiTests.Page
             return AddMembersFields.Displayed;
         }
 
-        public void IsMembersFieldDisplayed(String emails)
+        public CompanyInfoForm FillMemberEmails(String emails)
         {
             AddMembersFields.SendKeys(emails);
+            return this;
 
         }
 
-        public void ClickMembersInfoBtn()
+        public CompanyInfoForm ClickMembersInfoBtn()
         {
             MembersInfoSubmit.Click();
+            return this;
 
         }
 

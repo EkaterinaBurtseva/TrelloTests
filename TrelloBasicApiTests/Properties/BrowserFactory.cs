@@ -12,7 +12,7 @@ namespace TrelloBasicApiTests.Properties
 
         public BrowserFactory(BrowserType? browserType = null)
         {
-            this.browserType = browserType ?? Convert.tRunGlobalSettingHelper.WebDriverSettings.GetSection("browser").Value.As<BrowserType>();
+            this.browserType = browserType ?? RunGlobalSettingHelper.WebDriverSettings.GetSection("browser").Value.As<BrowserType>();
         }
 
         public Browser GetBrowser() => new Browser(GetDriver());
@@ -22,7 +22,7 @@ namespace TrelloBasicApiTests.Properties
             IWebDriver driver;
             int commandTimeoutSeconds = Convert.ToInt32(RunGlobalSettingHelper.WebDriverSettings.GetSection("commandTimeout").Value);
             int searchTimeout = Convert.ToInt32(RunGlobalSettingHelper.WebDriverSettings.GetSection("searchTimeout").Value);
-            int pageLoadTimeout = RunGlobalSettingHelper.WebDriverSettings.GetSection("pageLoadTimeout").Value.As<int>();
+            int pageLoadTimeout = Convert.ToInt32(RunGlobalSettingHelper.WebDriverSettings.GetSection("pageLoadTimeout").Value);
 
             TestContext.Instance.Logger.WriteLine($"Starting {browserType}").BreakLine();
 
@@ -57,5 +57,4 @@ namespace TrelloBasicApiTests.Properties
         private FirefoxOptions GetFirefoxOptions() => new FirefoxOptions();
        
     }
-}
 }
