@@ -1,14 +1,12 @@
-﻿using System;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using TrelloBasicApiTests.Assert;
 using TrelloBasicApiTests.Properties;
 
 namespace TrelloBasicApiTests.Page
 {
-    public class LoginPage: BasePage
+    public class LoginPage : BasePage
     {
-        public LoginPage():base()
+        public LoginPage() : base()
         {
             LogName = "Login Page";
         }
@@ -46,7 +44,7 @@ namespace TrelloBasicApiTests.Page
 
         public LoginPage ClickLoginButton()
         {
-         
+
             LoginButton.Click();
             return this;
         }

@@ -1,15 +1,14 @@
 ﻿using System;
 using TrelloBasicApiTests.Assert;
 using TrelloBasicApiTests.Page;
+using TrelloTests.Fixture;
 
 namespace TrelloBasicApiTests.PageSteps
 {
-    public class BoardPageSteps
+    public class BoardPageSteps : BaseTestSteps
     {
         private BoardPage boardPage = new BoardPage();
-        public BoardPageSteps()
-        {
-        }
+
 
         public void VerifyBoardExistenseAndTitle(String boardTitle)
         {

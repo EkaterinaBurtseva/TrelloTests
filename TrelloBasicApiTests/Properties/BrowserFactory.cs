@@ -1,7 +1,7 @@
-﻿using System;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium;
+using System;
 using TrelloBasicApiTests.Helpers;
 
 namespace TrelloBasicApiTests.Properties
@@ -20,9 +20,9 @@ namespace TrelloBasicApiTests.Properties
         private IWebDriver GetDriver()
         {
             IWebDriver driver;
-            int commandTimeoutSeconds = Convert.ToInt32(RunGlobalSettingHelper.WebDriverSettings.GetSection("commandTimeout").Value);
-            int searchTimeout = Convert.ToInt32(RunGlobalSettingHelper.WebDriverSettings.GetSection("searchTimeout").Value);
-            int pageLoadTimeout = Convert.ToInt32(RunGlobalSettingHelper.WebDriverSettings.GetSection("pageLoadTimeout").Value);
+            int commandTimeoutSeconds = RunGlobalSettingHelper.WebDriverSettings.GetSection("commandTimeout").Value.As<int>();
+            int searchTimeout = RunGlobalSettingHelper.WebDriverSettings.GetSection("searchTimeout").Value.As<int>();
+            int pageLoadTimeout = RunGlobalSettingHelper.WebDriverSettings.GetSection("pageLoadTimeout").Value.As<int>();
 
             TestContext.Instance.Logger.WriteLine($"Starting {browserType}").BreakLine();
 
@@ -42,7 +42,7 @@ namespace TrelloBasicApiTests.Properties
             return driver;
         }
 
-        
+     
         private ChromeOptions GetChromeOptions()
         {
             ChromeOptions options = new ChromeOptions();

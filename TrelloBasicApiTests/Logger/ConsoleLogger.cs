@@ -3,7 +3,7 @@ using Xunit.Abstractions;
 
 namespace TrelloBasicApiTests.Logger
 {
-    public class ConsoleLogger
+    public class ConsoleLogger : ILogger
     {
         private readonly ITestOutputHelper output;
 
@@ -12,16 +12,16 @@ namespace TrelloBasicApiTests.Logger
             this.output = output;
         }
 
-        public ILogger WriteLine(string log)
+        public ILogger WriteLine(string logEntry)
         {
-            output.WriteLine($"{timepstampFormatted} - {log}");
-            return (ILogger)this;
+            output.WriteLine($"{timepstampFormatted} - {logEntry}");
+            return this;
         }
 
         public ILogger BreakLine()
         {
             output.WriteLine(string.Empty);
-            return (ILogger)this;
+            return this;
         }
 
         private string timepstampFormatted => DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss.fff");

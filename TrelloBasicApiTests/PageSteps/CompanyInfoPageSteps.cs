@@ -1,10 +1,11 @@
 ﻿using System;
 using TrelloBasicApiTests.Assert;
 using TrelloBasicApiTests.Page;
+using TrelloTests.Fixture;
 
 namespace TrelloBasicApiTests.PageSteps
 {
-    public class CompanyInfoPageSteps
+    public class CompanyInfoPageSteps : BaseTestSteps
     {
         private CompanyInfoForm companyInfoPage = new CompanyInfoForm();
         public CompanyInfoPageSteps()

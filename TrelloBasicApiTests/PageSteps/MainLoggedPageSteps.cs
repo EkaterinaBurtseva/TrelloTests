@@ -1,10 +1,11 @@
 ﻿using System;
 using TrelloBasicApiTests.Assert;
 using TrelloBasicApiTests.Page;
+using TrelloTests.Fixture;
 
 namespace TrelloBasicApiTests.PageSteps
 {
-    public class MainLoggedPageSteps
+    public class MainLoggedPageSteps: BaseTestSteps
     {
         private MainLoggedPage mainLoggedPage = new MainLoggedPage();
         public MainLoggedPageSteps( )

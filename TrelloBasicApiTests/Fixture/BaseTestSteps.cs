@@ -1,10 +1,8 @@
-﻿using Allure.Commons;
-using NUnit.Framework;
-using TechTalk.SpecFlow;
-using TrelloBasicApiTests.Properties;
+﻿using TrelloBasicApiTests.Properties;
+using Xunit;
 using TestContext = TrelloBasicApiTests.Properties.TestContext;
 
-namespace TrelloTests.Steps
+namespace TrelloTests.Fixture
 {
     public abstract class BaseTestSteps
     {
@@ -33,16 +31,6 @@ namespace TrelloTests.Steps
                 Assert.True(false, "Test Failed. Check logs for details.");
             }
         }
-
-
-        [BeforeTestRun]
-        public static void BeforeTestRun()
-        {
-            AllureLifecycle.Instance.CleanupResultDirectory();
-        }
-
-
-
 
     }
 }

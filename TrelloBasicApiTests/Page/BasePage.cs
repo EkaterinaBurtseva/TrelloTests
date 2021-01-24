@@ -7,12 +7,12 @@ using TrelloBasicApiTests.Properties;
 
 namespace TrelloBasicApiTests.Page
 {
-    public abstract class BasePage :HtmlPage, IPage
+    public abstract class BasePage : HtmlPage, IPage
     {
-        private readonly bool waitTillLoaded = Convert.ToBoolean(RunGlobalSettingHelper.UiSettings.GetSection("waitpagesloaded").Value);
+        private readonly bool waitTillLoaded = RunGlobalSettingHelper.RunEnvironment.GetSection("waitpagesloaded").Value.As<bool>();
 
         public Browser Browser;
-        public string LogName { get; protected set; }  
+        public string LogName { get; protected set; }
 
         public BasePage() : base(BrowserContext.Instance.Browser.Driver)
         {

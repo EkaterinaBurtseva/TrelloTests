@@ -8,19 +8,20 @@ using TrelloBasicApiTests.PageSteps;
 namespace TrelloTests.Steps
 {
     [Binding]
-    public class UISteps : BaseTestSteps
+    public class UISteps
     {
-      
+
+        public UISteps()
+        {
+
+        }
         private MainLoggedPageSteps mainLoggedPageSteps = new MainLoggedPageSteps();
         private BoardPageSteps boardPageSteps = new BoardPageSteps();
         private LoginPageSteps loginPageSteps = new LoginPageSteps();
         private HomePageSteps homePageSteps = new HomePageSteps();
         private CompanyInfoPageSteps companyInfoPageSteps = new CompanyInfoPageSteps();
         private TeamInfoPageSteps teamInfoPageSteps = new TeamInfoPageSteps();
-        public UISteps()
-        {
-
-        }
+      
 
         [StepDefinition(@"I login to the system as an existing user")]
         public void LoginToTheSystemAsExistingUser()
@@ -71,7 +72,7 @@ namespace TrelloTests.Steps
         public void ListEmailsInMembersSecrion(String teamName)
         {
             teamInfoPageSteps.VerifyTeamPageIsOpenedWithCorrectTeamName(teamName);
-            teamInfoPageSteps.CheckUsersForGivenEmail()
+            teamInfoPageSteps.CheckUsersForGivenEmail();
 
         }
     }

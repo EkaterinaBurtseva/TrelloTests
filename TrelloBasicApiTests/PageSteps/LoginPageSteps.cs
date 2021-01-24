@@ -1,19 +1,14 @@
 ﻿using System;
 using TrelloBasicApiTests.Assert;
 using TrelloBasicApiTests.Page;
+using TrelloTests.Fixture;
 
 namespace TrelloBasicApiTests.PageSteps
 {
-    public class LoginPageSteps
+    public class LoginPageSteps: BaseTestSteps
     {
 
         private LoginPage loginPage = new LoginPage();
-
-
-        public LoginPageSteps()
-        {
-
-        }
 
         public void LoginToTheSystemWithExistedUser()
         {

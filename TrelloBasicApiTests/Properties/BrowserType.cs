@@ -1,7 +1,6 @@
-﻿using System;
-namespace TrelloBasicApiTests.Properties
+﻿namespace TrelloBasicApiTests.Properties
 {
-    public enum BrowserType:int
+    public enum BrowserType : int
     {
         Chrome = 0,
 

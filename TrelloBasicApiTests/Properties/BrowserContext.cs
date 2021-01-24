@@ -1,7 +1,7 @@
 ﻿using System;
 namespace TrelloBasicApiTests.Properties
 {
-    public sealed class BrowserContext: IDisposable
+    public sealed class BrowserContext : IDisposable
     {
         private BrowserContext()
         {

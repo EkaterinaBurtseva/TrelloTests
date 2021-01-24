@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using Microsoft.Extensions.Configuration;
 
 namespace TrelloBasicApiTests.Helpers
@@ -15,7 +14,6 @@ namespace TrelloBasicApiTests.Helpers
 
         public static IConfigurationSection WebDriverSettings => RunSettings.GetSection("webdriver");
         public static IConfigurationSection RunEnvironment => RunSettings.GetSection("environment");
-        public static IConfigurationSection UiSettings => RunSettings.GetSection("ui");
 
         private static IConfigurationRoot ReadConfiguration()
         {
