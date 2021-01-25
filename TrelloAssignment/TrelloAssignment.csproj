@@ -49,6 +49,7 @@
     <Folder Include="UI\Properties\" />
     <Folder Include="UI\Elements\" />
     <Folder Include="allure-results\" />
+    <Folder Include="ManualActivities\" />
   </ItemGroup>
   <ItemGroup>
     <SpecFlowFeatureFiles Update="Features\TrelloBasicFeature.feature">
