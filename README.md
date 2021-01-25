@@ -1,5 +1,5 @@
 # General info
-Test automation solution to verify https://petstore.swagger.io/#/
+Test automation solution to verify https://trello.com/
 
 # Environment
 * Nunit
